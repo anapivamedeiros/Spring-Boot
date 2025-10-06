@@ -45,15 +45,15 @@ public class CalculadoraControllers {
 			case "somar": resultado = num1 + num2; break;
 			case "subtrair": resultado = num1 - num2; break;
 			case "multiplicar": resultado = num1 * num2; break;
-			case "dividisao":
+			case "divisao":
 				if(num2==0) erro = "Divisão por zero não é permitido. ";
 				else resultado = num1/num2; break ;
 				default: erro= "Operação inválida";
 				
 		}
 		Map<String, Object> resp = new HashMap<>();
-		resp.put(", resp: ", resultado);
-		resp.put("erro:  ", erro);
+		resp.put("resultado", resultado);
+		resp.put("erro", erro);
 		return resp;
 			
 		}
