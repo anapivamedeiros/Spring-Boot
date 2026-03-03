@@ -7,6 +7,6 @@ import com.analaura.Cadastro.entities.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-   // Método para buscar usuário pelo email
+
 Usuario findByEmail(String email);
 }
