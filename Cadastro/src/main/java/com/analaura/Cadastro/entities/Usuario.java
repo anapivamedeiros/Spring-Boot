@@ -1,5 +1,6 @@
 package com.analaura.Cadastro.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,6 +27,18 @@ private String complemento;
 private String cep;
 private String cidade;
 private String estado;
+
+
+
+@Column(columnDefinition = "LONGTEXT")
+private String foto;
+public String getFoto() {
+return foto;
+}
+public void setFoto(String foto) {
+this.foto = foto;
+}
+
 
 public String getNome() { return nome; }
 public void setNome(String nome) { this.nome = nome; }
@@ -56,6 +69,7 @@ public void setCidade(String cidade) { this.cidade = cidade; }
 
 public String getEstado() { return estado; }
 public void setEstado(String estado) { this.estado = estado; }
+
 }
 
 

@@ -32,7 +32,7 @@ public class UsuarioService {
     	if (usuario == null) {
     	return null;
     	}
-
+    	usuario.setFoto(dados.getFoto());
     	usuario.setNome(dados.getNome());
     	usuario.setEmail(dados.getEmail());
     	usuario.setSenha(dados.getSenha());
