@@ -31,10 +31,9 @@ public class UsuarioController {
     }
    
     @PostMapping
-    public ResponseEntity<Usuario> cadastrarUsuario(@RequestBody Usuario usuario){
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .body(service.cadastrar(usuario));
+    public ResponseEntity<Usuario> cadastrarUsuario(@RequestBody Usuario usuario) {
+        Usuario novoUsuario = service.cadastrar(usuario);
+        return ResponseEntity.status(HttpStatus.CREATED).body(novoUsuario);
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarUsuario(@PathVariable Long id) {
@@ -80,6 +79,5 @@ public class UsuarioController {
 
         return ResponseEntity.ok(usuario);
     }
-    
     
 }
