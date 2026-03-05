@@ -50,5 +50,29 @@ public class UsuarioService {
     	repository.deleteById(id);
     	return true;
     	}
+    	
+    	
+    	
+    	
+    	  public Usuario login(String email, String senha) {
+
+    	        Usuario usuario = repository.findByEmail(email);
+
+    	        if (usuario == null) {
+    	            return null;
+    	        }
+
+    	        if (usuario.getSenha().equals(senha)) {
+    	            return usuario;
+    	        }
+
+    	        return null;
+    	    }
+
+		  public Usuario login1(String email, String senha) {
+			// TODO Auto-generated method stub
+			return null;
+		  }
+    	
 }
 
