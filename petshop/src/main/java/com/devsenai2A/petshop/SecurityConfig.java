@@ -10,20 +10,21 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration 
 @EnableWebSecurity 
 public class SecurityConfig { 
-@Bean 
-public SecurityFilterChain filterChain(HttpSecurity http) throws Exception { 
-http 
-.csrf(csrf -> csrf.disable()) 
-.cors(cors -> {})
-.authorizeHttpRequests(auth -> auth 
-.requestMatchers("/api/categorias/**").permitAll() 
-.anyRequest().authenticated() 
-); 
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	    http
+	        .csrf(csrf -> csrf.disable())
+	        .cors(cors -> {})
+	        .authorizeHttpRequests(auth -> auth
+	            .anyRequest().permitAll() // 🔥 LIBERA TUDO
+	        );
 
-return http.build(); 
-}
+	    return http.build();
+	}
 @Bean 
 public BCryptPasswordEncoder passwordEncoder() { 
 return new BCryptPasswordEncoder(); 
 } 
+
+
 } 

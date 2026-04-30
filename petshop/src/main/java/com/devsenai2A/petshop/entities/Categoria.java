@@ -1,5 +1,6 @@
 package com.devsenai2A.petshop.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -7,12 +8,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "categorias")
+@Table(name = "categoria")
 
 public class Categoria {
 
 @Id()
 @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "id_categoria")
 private Long id;
 
 private String nome;
