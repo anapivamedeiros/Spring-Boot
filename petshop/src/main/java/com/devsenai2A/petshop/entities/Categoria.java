@@ -21,6 +21,7 @@ private String nome;
 private String descricao;
 //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 
+
 public Categoria() {}
 
 public String getNome() {

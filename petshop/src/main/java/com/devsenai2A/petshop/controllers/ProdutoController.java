@@ -9,7 +9,7 @@ import com.devsenai2A.petshop.entities.Produto;
 import com.devsenai2A.petshop.services.ProdutoService;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/produto")
 @CrossOrigin("*")
 public class ProdutoController {
 

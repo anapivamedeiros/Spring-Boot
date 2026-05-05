@@ -24,9 +24,9 @@ public class Produto {
     private Integer qtdEstoque;
 
     private Boolean ativo = true;
-
-    @ManyToOne
-    @JoinColumn(name = "id_categoria")
+    
+    @ManyToOne 
+    @JoinColumn(name = "id_categoria") 
     private Categoria categoria;
 
     // GETTERS E SETTERS
