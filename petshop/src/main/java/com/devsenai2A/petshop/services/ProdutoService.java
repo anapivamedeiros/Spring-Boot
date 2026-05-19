@@ -1,6 +1,7 @@
 package com.devsenai2A.petshop.services;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,4 +45,12 @@ public class ProdutoService {
     public void deletar(Long id) {
         repository.deleteById(id);
     }
+
+    // NOVO
+    public List<Produto> buscarPorCategoria(Long idCategoria) {
+        return repository.findByCategoriaId(idCategoria);
+    }
+    
+    
+    
 }
